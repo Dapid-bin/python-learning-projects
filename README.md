@@ -1,53 +1,46 @@
 # 🐍 Python Learning Projects
 
-Selamat datang di repo **Python Learning Projects** 🚀  
-Repo ini berisi kumpulan project mini hasil belajar Python dari basic → advanced.  
-Fokus utama repo ini adalah **belajar sambil bikin project nyata**, bukan hanya teori.
+Selamat datang di repository **Python Learning Projects**.  
+Repo ini berisi perjalanan belajar Python saya dari basic → mini project → eksperimen → big project.  
+Disusun rapi biar gampang dipelajari ulang dan dikembangkan.
+
+
+## 📂 Struktur Folder
+
+python-learning-projects/ │ ├── 0-basic/          # Latihan dasar Python (Hello World, variabel, loop, fungsi) ├── 1-mini-projects/  # Project kecil (kalkulator, konversi, biodata, dll) ├── 2-experiments/    # Eksperimen random (OOP test, comprehension, error handling) ├── 3-big-projects/   # Project lebih serius (contoh: KGC tools) ├── assets/           # Logo, gambar, file pendukung └── README.md         # Dokumentasi utama repo
+
+
+## 🚀 Progress Belajar
+- ✅ Input–Process–Output  
+- ✅ Variabel & Tipe Data  
+- ✅ Operator  
+- ✅ If/Else  
+- ✅ Loop (for/while)  
+- 🔄 Fungsi (on progress)  
+- 🔜 Struktur Data, Error Handling, File, OOP, dll  
 
 ---
 
-## 📌 Isi Project
-- **Aritmatika** → kalkulator sederhana (+, -, *, /, %, **)
-- **Perbandingan** → latihan operator logika (and, or, not)
-- **Konversi** → umur, mata uang (fiat), dll
-- **Biodata** → input data user & format output
-- **Menu App** → navigasi sederhana pakai dictionary & function
-- (Akan terus diupdate ⚡)
+## ⚡ Cara Jalanin Code
+Clone repo ini ke lokal:
+```bash
+git clone https://github.com/Dapid-bin/python-learning-projects.git
 
----
+Masuk ke folder project lalu jalankan:
 
-## 🎯 Tujuan Belajar
-- Memahami dasar Python (syntax, variabel, operator, loop, fungsi).
-- Membangun kebiasaan **learning by project**.
-- Menggunakan GitHub untuk dokumentasi perjalanan belajar.
+python nama_file.py
 
----
 
-## ⚙️ Teknologi
-- **Python** (via Termux)
-- **Git & GitHub** (commit, push, version control)
+🎯 Tujuan
+Belajar ini bukan sekadar ngoding → tapi perjalanan panjang buat upgrade diri.  
+Kenapa repo ini ada? Karena:
 
----
+- 🔥 **Konsistensi** → belajar Python setiap hari, walau cuma sedikit tapi terus maju.  
+- 📚 **Dokumentasi** → semua progress, error, eksperimen dicatat biar jadi jejak belajar.  
+- 💼 **Goal Akhir** → dari latihan → project → skill nyata → siap terjun ke freelance or developer.
 
-## 🚧 Progress
-- [x] Variabel & Operator  
-- [x] If/Else  
-- [ ] Loop (for / while)  
-- [ ] Fungsi  
-- [ ] Struktur Data  
-- [ ] Error Handling  
-- [ ] File & Module  
-- [ ] OOP  
 
----
+🏴‍☠️ Catatan
 
-## 👨‍💻 Author
-- Dapid-bin 🏴‍☠️  
-Belajar Python dari nol → bikin project mini → push ke GitHub.  
-Motto: `"Error is Friend 🔋"`  
-
----
-
-## 📜 Catatan
-Repo ini bukan buat kode sempurna, tapi **dokumentasi perjalanan belajar**.  
-Update harian: tambah project mini, eksperimen, refactor, dan commit ke GitHub.
+Learning by Pomodoro Method ⏳.
+Repo ini jadi bukti progress step by step sampai ke next level berikutnya.
