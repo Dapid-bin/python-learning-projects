@@ -591,4 +591,4 @@ while True:
 		print("[ PROGRAM SELSESAI ]")
 		break
 	else:
-		print('\t[ Fitur tidak ada bro ]')
+		print(f'\t[ Fitur tidak ada bro {name} ]')
