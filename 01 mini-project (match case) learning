@@ -1,0 +1,38 @@
+while True:
+	print("""===Single shoot Tools===
+A. Coca cola	|	Bonus: code 1200
+B. Pepsi
+C.Sprite
+D. Fanta
+E. exit""")
+
+	ghost = []
+
+	def main(ghost, single):
+		ghost.append(input(single).upper())
+
+#	tombol_ditekan = input("Menu: ").upper()
+	main(ghost, "\t menu: ")
+	print(ghost)
+
+	match ghost[0]:
+		case "A":
+			print("Keluarkan Coca-Cola")
+		case "B":
+			print("Keluarkan Pepsi")
+		case "C":
+			print("Keluarkan Sprite")
+		case "D":
+			print("Keluarkan Fanta")
+		case "E":
+			break
+
+		case "1200":
+			main(ghost, "Anaka Ke-1: ")
+			main(ghost, "Anaka Ke-2: ")
+			main(ghost, "Operasi: ")
+			print(ghost[1], ghost[3], ghost[2], "=", eval(ghost[1] + ghost[3] + ghost[2]))
+			print(ghost)
+
+		case _:
+			print("Tombol tidak valid")
