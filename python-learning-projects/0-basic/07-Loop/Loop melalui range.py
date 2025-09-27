@@ -62,7 +62,7 @@ print("user input in range(default_complex)")
 default_complex = 5 + 5j
 
 for kOmpleks in range(int(default_complex.real)):
-	print("output = (default_complex.real) Ke-", kOmpleks_user)
+	print("output = (default_complex.real) Ke-", kOmpleks)
 
 for koMpleks in range(int(default_complex.imag)):
-	print("output = (default_complex.imag) Ke-", koMpleks_user)
+	print("output = (default_complex.imag) Ke-", koMpleks)
