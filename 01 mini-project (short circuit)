@@ -1,0 +1,27 @@
+a = input("A: ")
+b = int(a) or int(0)
+bb = str(b)
+print("A =", bb)
+
+c = input("B: ")
+d = int(c) or int(123098)
+dd = str(d)
+print("B =", dd)
+
+p = input("Operator: ")
+
+if "123098" in dd:
+	print("ZeroDivisionEror")
+
+elif not "123098" in dd:
+	bilangan = input("Bilangan: ").upper()
+
+	if "BULAT" in bilangan:
+		print(int(eval(bb + p + dd)))
+
+	elif "DESIMAL" in bilangan:
+		print(float(eval(bb + p + dd)))
+
+	else:
+		print("Bilangan " + bilangan + "Tidak Tersedia !!")
+
