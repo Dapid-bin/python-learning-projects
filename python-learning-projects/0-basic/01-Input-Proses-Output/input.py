@@ -8,4 +8,4 @@ complexs = complex(input("Input complex: ")) # Output (1 real (1j imag))
 
 split_input = input("Split input dengan coma (,): ").split(",") # Input Dapid,19
 name, age = split_input
-age = int(age.strip()) <- conversi str -> to int
+age = int(age.strip()) # <- conversi str -> to int
