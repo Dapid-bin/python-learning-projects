@@ -1,0 +1,114 @@
+def kalkulator():
+	def all_in():
+		while True:
+			def bulat():
+				print("===== [BULAT]")
+				print(f'{a} + {b} = {tambah}')
+				print(f'{a} - {b} = {kurang}')
+				print(f'{a} * {b} = {kali}')
+				print(f'{a} // {b} = {bagi_bulat}')
+				print(f'{a} % {b} = {modulus}')
+				print(f'{a} ** {b} = {pangkat}')
+
+			def desimal():
+				print("===== [DESIMAL]")
+				print(f'{a} + {b} = {float(tambah)}')
+				print(f'{a} - {b} = {float(kurang)}')
+				print(f'{a} * {b} = {float(kali)}')
+				print(f'{a} / {b} = {float(bagi_desimal)}')
+				print(f'{a} % {b} = {float(modulus)}')
+				print(f'{a} ** {b} = {float(pangkat)}')
+
+			def all():
+				print("===== [BULAT]")
+				print(f'{a} + {b} = {tambah}')
+				print(f'{a} - {b} = {kurang}')
+				print(f'{a} * {b} = {kali}')
+				print(f'{a} // {b} = {bagi_bulat}')
+				print(f'{a} % {b} = {modulus}')
+				print(f'{a} ** {b} = {pangkat}')
+	
+				print("===== [DESIMAL]")
+				print(f'{a} + {b} = {float(tambah)}')
+				print(f'{a} - {b} = {float(kurang)}')
+				print(f'{a} * {b} = {float(kali)}')
+				print(f'{a} / {b} = {float(bagi_desimal)}')
+				print(f'{a} % {b} = {float(modulus)}')
+				print(f'{a} ** {b} = {float(pangkat)}')
+
+			print("↓====👾 ALL IN FITUR 👾====↓")
+
+			print("!! <Warning Input Zero = 1> !!")
+			a = int(input("Angka ke 1: ")) or 1
+			b = int(input("Angka ke 2: ")) or 1
+
+			tambah = a + b
+			kurang = a - b
+			kali = a * b
+			bagi_desimal = a / b
+			bagi_bulat = a // b
+			modulus = a % b
+			pangkat = a ** b
+			
+			print('👾 Opsi Hasil:')
+			print('> Desimal')
+			print('> Bulat')
+			option = input("Opsi: ").upper()
+			
+			bilangan = {
+				"BULAT": bulat,
+				"DESIMAL": desimal,
+				"BULAT AND DESIMAL": all
+			}
+
+			if option in bilangan:
+				print("==< VIEW >==")
+				bilangan[option]()
+			else:
+				print(f"Opsi hasil ({option}) tidak ada")
+			
+			print("> EXIT ")
+			print("> NO")
+			user = input("input: ").upper()
+			
+			match user:
+				case "Y":
+					print("Oke Bro", name, "✌")
+					break
+
+'''
+def bulat():
+	print("===== [BULAT]")
+	print(f'{a} + {b} = {tambah}')
+	print(f'{a} - {b} = {kurang}')
+	print(f'{a} * {b} = {kali}')
+	print(f'{a} // {b} = {bagi_bulat}')
+	print(f'{a} % {b} = {modulus}')
+	print(f'{a} ** {b} = {pangkat}')
+
+def desimal():
+	print("===== [DESIMAL]")
+	print(f'{a} + {b} = {float(tambah)}')
+	print(f'{a} - {b} = {float(kurang)}')
+	print(f'{a} * {b} = {float(kali)}')
+	print(f'{a} / {b} = {float(bagi_desimal)}')
+	print(f'{a} % {b} = {float(modulus)}')
+	print(f'{a} ** {b} = {float(pangkat)}')
+
+def all():
+	print("===== [BULAT]")
+	print(f'{a} + {b} = {tambah}')
+	print(f'{a} - {b} = {kurang}')
+	print(f'{a} * {b} = {kali}')
+	print(f'{a} // {b} = {bagi_bulat}')
+	print(f'{a} % {b} = {modulus}')
+	print(f'{a} ** {b} = {pangkat}')
+	
+	print("===== [DESIMAL]")
+	print(f'{a} + {b} = {float(tambah)}')
+	print(f'{a} - {b} = {float(kurang)}')
+	print(f'{a} * {b} = {float(kali)}')
+	print(f'{a} / {b} = {float(bagi_desimal)}')
+	print(f'{a} % {b} = {float(modulus)}')
+	print(f'{a} ** {b} = {float(pangkat)}')
+'''
