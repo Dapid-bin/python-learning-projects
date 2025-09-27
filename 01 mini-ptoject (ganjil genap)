@@ -1,0 +1,60 @@
+def ganjil_genap_7():
+	def ganjil():
+		while True:
+			a = int(input("Tebak bilangan Ganjil: "))
+				
+			print(f"{a} Bener Bilangan Ganjil 📸")  if a % 2 == 1 else print(f"{a} Bukan Bilangan Ganjil 👀")
+		
+			print("=> Lanjut")
+			print("=> Exit")
+			user = input("Input you: ").upper()
+		
+			match user:
+				case "LANJUT":
+					print("Oke 🤟")
+				case "EXIT":
+					print("Oke Bro " + name + " ✌")
+					break
+				case _:
+					print(f"Problem input ({user})")
+					break
+
+	def genap():
+		while True:
+			a = int(input("Tebak bilangan Genap: "))
+				
+			print(f"{a} Bener Bilangan Genap 📸")  if a % 2 == 0 else print(f"{a} Bukan Bilangan Genap 👀")
+	
+			print("=> Lanjut")
+			print("=> Exit")
+			user = input("Input you: ").upper()
+	
+			match user:
+				case "LANJUT":
+					print("Oke 🤟")
+				case "EXIT":
+					print("Oke Bro " + name + " ✌")
+					break
+				case _:
+					print(f"Problem input ({user})")
+					break
+
+	while True:
+		print("== 👾Bilangan Ganjil & Genap 👾==")
+		print("=> Bilangan Ganjil")
+		print("=> Bilangan Genap")
+		print("=> Exit")
+		menu = input("Menu: ").upper()
+		
+		user = {
+			"BILANGAN GANJIL": ganjil,
+			"BILANGAN GENAP": genap
+		}
+		
+		if menu in user:
+			user[menu]()
+		elif "EXIT" in menu:
+			print("Oke Bro " + name + " ✌")
+			break
+		else:
+			print(f"Menu ({menu}) tidak ada")
