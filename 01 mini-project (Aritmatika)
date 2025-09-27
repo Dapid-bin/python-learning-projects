@@ -1,0 +1,144 @@
+def aritmatika_1():
+	def all_in():
+		while True:
+			def bulat():
+				print("===== [BULAT]")
+				print(f'{a} + {b} = {tambah}')
+				print(f'{a} - {b} = {kurang}')
+				print(f'{a} * {b} = {kali}')
+				print(f'{a} // {b} = {bagi_bulat}')
+				print(f'{a} % {b} = {modulus}')
+				print(f'{a} ** {b} = {pangkat}')
+
+			def desimal():
+				print("===== [DESIMAL]")
+				print(f'{float(a)} + {float(b)} = {float(tambah)}')
+				print(f'{float(a)} - {float(b)} = {float(kurang)}')
+				print(f'{float(a)} * {float(b)} = {float(kali)}')
+				print(f'{float(a)} / {float(b)} = {float(bagi_desimal)}')
+				print(f'{float(a)} % {float(b)} = {float(modulus)}')
+				print(f'{float(a)} ** {float(b)} = {float(pangkat)}')
+
+			def all():
+				print("===== [BULAT]")
+				print(f'{a} + {b} = {tambah}')
+				print(f'{a} - {b} = {kurang}')
+				print(f'{a} * {b} = {kali}')
+				print(f'{a} // {b} = {bagi_bulat}')
+				print(f'{a} % {b} = {modulus}')
+				print(f'{a} ** {b} = {pangkat}')
+	
+				print("===== [DESIMAL]")
+				print(f'{float(a)} + {float(b)} = {float(tambah)}')
+				print(f'{float(a)} - {float(b)} = {float(kurang)}')
+				print(f'{float(a)} * {float(b)} = {float(kali)}')
+				print(f'{float(a)} / {float(b)} = {float(bagi_desimal)}')
+				print(f'{float(a)} % {float(b)} = {float(modulus)}')
+				print(f'{float(a)} ** {float(b)} = {float(pangkat)}')
+
+			print("↓====👾 ALL IN FITUR 👾====↓")
+
+			print("!! <( Warning Input Zero = 1 )> !!")
+			a = int(input("Angka ke 1: ")) or 1
+			b = int(input("Angka ke 2: ")) or 1
+
+			tambah = a + b
+			kurang = a - b
+			kali = a * b
+			bagi_desimal = a / b
+			bagi_bulat = a // b
+			modulus = a % b
+			pangkat = a ** b
+			
+			print('👾 Opsi Hasil:')
+			print('> Desimal')
+			print('> Bulat')
+			print('> Bulat And Desimal')
+			option = input("Opsi: ").upper()
+			
+			bilangan = {
+				"BULAT": bulat,
+				"DESIMAL": desimal,
+				"BULAT AND DESIMAL": all
+			}
+
+			if option in bilangan:
+				print("==< VIEW >==")
+				bilangan[option]()
+			else:
+				print(f"Opsi hasil ({option}) tidak ada")
+			
+			print("> EXIT ")
+			print("> NO")
+			user = input("input: ").upper()
+			
+			match user:
+				case "EXIT":
+					print("Oke Bro", name, "✌")
+					break
+
+	def manual():
+		while True:
+			bilangan = []
+			def main(bilangan, user):
+				bilangan.append(input(user).upper())
+	
+			print('↓====👾 MANUAL FITUR 👾====↓')
+	
+			print("👾 Opsi Operator:")
+			print('''> Tambah: +
+> Kurang: -
+> Kali: *
+> Bagi: Bulat(//) Desimal(/)
+> Modulus: %
+> Pangkat: **''')
+			c = input("Opsi you: ")
+
+			print("!! <( Warning Input Zero = 1 )> !!")
+			a = input("Angka ke-1: ") or 1
+			b = input("Angka ke-2: ") or 1
+	
+			print("👾 Opsi Hasil:")
+			print('> Desimal')
+			print('> Bulat')
+			main(bilangan, "Opsi you: ")
+	
+			match bilangan[0]:
+				case "BULAT":
+					print("==< VIEW >==")
+					print(a, c, b, "=", int(eval(a + c + b)))
+				case "DESIMAL":
+					print("==< VIEW >==")
+					print(float(a), c, float(b), "=", float(eval(a + c + b)))
+				case _:
+					print("👾 Problem input")
+	
+			print("> EXIT ")
+			print("> NO")
+			main(bilangan, "Input: ")
+	
+			match bilangan[1]:
+				case "EXIT":
+					print("Oke Bro", name, "✌")
+					break
+
+#=====MAPING
+	while True:
+		print("↓====👾 ARITMATIKA 👾====↓")
+		print("> Manual")
+		print("> All in")
+		print("> Exit")
+		main = input("Pilih Menu: ").upper()
+	
+		menu = {
+		"MANUAL": manual,
+		"ALL IN": all_in
+		}
+	
+		if main in menu:
+			menu[main]()
+		elif "EXIT" in main:
+			print("Oke Bro", name, "✌")
+			break
+		else:
+			print("Menu Tidak ada")
