@@ -514,8 +514,8 @@ def status_8():
 					break
 	
 	menu = {
-		"DUA STATUS": multiple_status,
-		"SATU STATUS": single_status
+		"dua status": multiple_status,
+		"satu status": single_status
 	}
 	
 	while True:
@@ -523,33 +523,114 @@ def status_8():
 		print("=> Satu Status")
 		print("=> Dua Status")
 		print("=> Exit")
-		user = input("Menu: ").upper()
+		user = input("Menu: ").lower()
 		
 		if user in menu:
 			menu[user]()
-		elif "EXIT" in user:
+		elif "exit" in user:
 			break
 		else:
 			print(f"Menu ({user}) Tidak Ada!!")
+
+#======9.Kalkulator & perbandingan======
+def kalkulator_dan_perbandingan():
+	while True:
+		print("\n==👾 Kalkulator & Perbandingan 👾==")
+
+		print('↓ Operator ↓		↓ perbandingan ↓')
+		print('''Tambah = +		Sama dengan = ==
+Kurang = -		Tidak sama dengan = !=
+Kali = *		Lebih besar = >
+Bagi desimal = /	Lebih kecil = <
+Bagi bulat = //		Besar atau sama = >=
+Modulus = %		Kecil atau sama = <=
+Pangkat = **''')
+		
+		angka_pertama = int(input("\nAngka ke-1: "))
+		operasi = input("Operator: ")
+		angka_kedua = int(input("Angka ke-2: "))
+
+		while (operasi in "/" or operasi in "//") and (angka_kedua == 0):
+			print("\t⚠️ Tidak bisa dibagi dengan nol 👀")
+			angka_kedua = int(input("Angka ke-2: "))		
+
+		match operasi:
+			case "+":
+				print(angka_pertama, operasi, angka_kedua, '=', angka_pertama + angka_kedua)
+			
+			case "-":
+				print(angka_pertama, operasi, angka_kedua, '=', angka_pertama - angka_kedua)
+		
+			case "*":
+				print(angka_pertama, operasi, angka_kedua, '=', angka_pertama * angka_kedua)
+		
+			case "/":
+				print(angka_pertama, operasi, angka_kedua, '=', angka_pertama / angka_kedua)
+		
+			case "//":
+				print(angka_pertama, operasi, angka_kedua, '=', angka_pertama // angka_kedua)
+		
+			case "%":
+				print(angka_pertama, operasi, angka_kedua, '=', angka_pertama % angka_kedua)
+		
+			case "**":
+				print(angka_pertama, operasi, angka_kedua, '=', angka_pertama ** angka_kedua)
+
+			case _:
+				global op
+				op = True
+
+		if operasi == "==":
+			print(angka_pertama, operasi, angka_kedua, '=', angka_pertama == angka_kedua)
+
+		elif operasi == "!=":
+			print(angka_pertama, operasi, angka_kedua, '=', angka_pertama != angka_kedua)
+
+		elif operasi == ">":
+			print(angka_pertama, operasi, angka_kedua, '=', angka_pertama > angka_kedua)
+
+		elif operasi == "<":
+			print(angka_pertama, operasi, angka_kedua, '=', angka_pertama < angka_kedua)
+
+		elif operasi == ">=":
+			print(angka_pertama, operasi, angka_kedua, '=', angka_pertama >= angka_kedua)
+
+		elif operasi == "<=":
+			print(angka_pertama, operasi, angka_kedua, '=', angka_pertama <= angka_kedua)
+
+		else:
+			global pb
+			pb = True
+
+
+		print("\n\t🌀KGC🌀QUANT") if pb or op else print("\n\tOperator&Perbandingan tadak ada !!")
+
+		print('\tLanjut\n\tExit')
+		user = input('Input: ').lower()
+	
+		match user:
+			case 'exit':
+				break
+
 #=====PILIHAN FITUR (USER)
 while True:
 	print("↓= WELCOME =↓")
 	print("=> Nama asli")
 	print("=> Anonymus 🎭")
-	opsi = input("Opsi you: ").upper()
+	opsi = input("Opsi you: ").lower()
 	
 	match opsi:
-		case "NAMA ASLI":
+		case "nama asli":
 			name = input('Name?: ').capitalize()
 			break
-		case "ANONYMUS":
-			name = 'KGC Anonymus user'
+		case "anonymus":
+			name = 'KGC_Anonymus_user'
 			break
 		case _:
 			print(f"Problem input ({opsi})")
 			continue
 
-print(f'👾 Welcome To The Kgroup Fitur {name} 👾')
+print(f'\t👾 [ 🌀KGC🌀QUANT ] 👾')
 
 while True:	
 	print('|\t==KGC SINGLE SHOOT TOLS=|')
@@ -564,6 +645,8 @@ while True:
 |\t6. BIODATA					|
 |\t7. GANJIL GENAP					|
 |\t8. STATUS UMUR					|
+|\t9. KALKULATOR & PERBANDINGAN					|
+|\t>. EXIT					|
 -----------------------------------------------''')
 
 	menu = {
@@ -574,7 +657,8 @@ while True:
 	    "BISA IKUT PEMILU": pemilu_5,
 	    "BIODATA": biodata_6,
 	    "GANJIL GENAP": ganjil_genap_7,
-	    "STATUS UMUR": status_8
+	    "STATUS UMUR": status_8,
+	    'KALKULATOR & PERBANDINGAN': kalkulator_dan_perbandingan
 	}
 	
 	choice = input("👾 Pilih menu: ").upper()
